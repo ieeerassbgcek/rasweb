@@ -24,7 +24,7 @@ export default function PortalPage() {
 
   async function handleLogout() {
     await signOut(auth);
-    router.replace("/");
+    window.location.href = "/";
   }
 
   async function handleSubmit(e: React.FormEvent) {

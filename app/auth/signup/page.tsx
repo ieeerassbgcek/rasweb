@@ -57,11 +57,14 @@ export default function SignupPage() {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-slate-950 px-4 text-slate-50">
-      <div className="w-full max-w-md rounded-2xl border border-white/10 bg-slate-900/80 p-6 shadow-xl shadow-black/40 backdrop-blur-xl">
-        <h1 className="text-xl font-semibold">Create Member Account</h1>
-        <p className="mt-1 text-sm text-slate-300">
-          Sign up to access the Components Portal and member features.
+    <main className="flex min-h-screen items-center justify-center bg-slate-950 px-4 py-8 text-slate-50">
+      <div className="w-full max-w-md rounded-3xl border border-white/10 bg-slate-900/85 p-7 shadow-2xl shadow-black/50 backdrop-blur-2xl">
+        <h1 className="text-2xl font-semibold tracking-tight">
+          Create Member Account
+        </h1>
+        <p className="mt-1.5 text-sm text-slate-300">
+          Sign up to access the Components Portal, projects dashboard, and
+          member features.
         </p>
         <form onSubmit={handleSubmit} className="mt-6 space-y-4 text-sm">
           <div>
@@ -191,16 +194,16 @@ export default function SignupPage() {
           <button
             type="submit"
             disabled={loading}
-            className="mt-2 w-full rounded-full bg-cyan-500 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/40 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
+            className="mt-1 w-full rounded-full bg-cyan-500 px-4 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/40 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {loading ? "Creating account..." : "Sign Up"}
           </button>
         </form>
-        <p className="mt-4 text-xs text-slate-400">
-          Already have an account? {""}
+        <p className="mt-4 text-[0.7rem] text-slate-400">
+          Already have an account?{" "}
           <Link
             href="/auth/login"
-            className="text-cyan-300 hover:text-cyan-200"
+            className="font-medium text-cyan-300 hover:text-cyan-200"
           >
             Login
           </Link>
